@@ -10,37 +10,37 @@
 SELECT * FROM products;
 
 -- Задание 2. Название и цена всех товаров
-
+SELECT name, price from products;
 
 -- Задание 3. Название и цена товаров дороже 1000 рублей
-
+SELECT name, price from products where price > 1000;
 
 -- Задание 4. Название и цена всех товаров — от самого дорогого к самому дешёвому
-
+SELECT name, price from products ORDER BY price DESC;
 
 -- Задание 5. Название и цена пяти самых дешёвых товаров (сначала самый дешёвый)
 
-
+SELECT name, price from products ORDER BY price  LIMIT 5;
 -- Задание 6. Клиенты из Казани (все столбцы)
 
-
+SELECT * FROM clients WHERE city = 'Казань';
 -- Задание 7. Название и цена товаров, в названии которых есть слово «Кофе»
-
+SELECT name, price  FROM products WHERE name LIKE '%Кофе%';
 
 -- Задание 8. Названия товаров, которых нет на складе
-
+SELECT name FROM products WHERE stock = 0;
 
 -- Задание 9. Заказы, сделанные в 2025 году (все столбцы)
-
+SELECT * FROM orders WHERE order_date BETWEEN '2025-01-01'AND '2025-12-31';
 
 -- ===================== Часть B. Подсчёты и группировка =====================
 
 -- Задание 10. Сколько всего товаров в каталоге
 
-
+SELECT COUNT(*) FROM products;
 -- Задание 11. Средняя цена товара, округлённая до целых
 
-
+SELECT AVG(price) FROM products ;
 -- Задание 12. Город и сколько в нём клиентов. Сначала города с большим числом клиентов, при равенстве — по алфавиту
 
 
